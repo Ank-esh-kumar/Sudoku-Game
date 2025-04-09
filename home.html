@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sudoku Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+  <div class="overlay hidden" id="overlay"></div>
+
+  <div class="container">
+    <h1>Sudoku</h1>
+    <!-- Menu Button & Panel -->
+<div class="menu-wrapper">
+  <button id="menuToggle" class="menu-btn">⚙️</button>
+  <div id="menuPanel" class="menu-panel">
+    <button id="closeMenu" class="close-btn">✖</button>
+    <label for="difficulty">Difficulty:</label>
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+    <button id="hint">💡</button>
+    <button id="solve">🔑</button>
+    <button id="toggleMusic">🎵</button>
+    <button id="themeToggle">🌙</button>
+  </div>
+</div>
+<button id="newGame">New Game</button>
+    <div id="sudoku-board" class="board"></div>
+    <button id="submit">Submit</button>
+  </div>
+  <div id="toast" class="toast"></div>
+  <audio id="bgMusic" loop>
+    <source src="sounds/Puzzle.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div>
+    <button onclick="window.location.href='index.html'" id="home-btn">🏠</button>
+    <button id="toggleAnimation">⏸</button>
+    <p id="copyright">&copy;Ankesh_Kumar_Singh</p>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
